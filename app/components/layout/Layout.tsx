@@ -1,10 +1,11 @@
 import { FC } from 'react'
 
 import styles from './Layout.module.scss'
-import Navigation from '@/components/layout/Navigation/Navigation'
-import Sidebar from '@/components/layout/Sidebar/Sidebar'
+import { LayoutProps } from '@/components/layout/Layout.props'
+import { Navigation } from '@/components/layout/Navigation/Navigation'
+import { Sidebar } from '@/components/layout/Sidebar/Sidebar'
 
-const Layout: FC = ({ children }) => {
+const Layout: FC<LayoutProps> = ({ children }) => {
 	return (
 		<div className={styles.layout}>
 			<Navigation />
